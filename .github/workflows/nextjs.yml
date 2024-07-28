@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PORTFOLIO_PATH: ${{ github.workspace }}/portfolio
+      github.workspace: ${{ github.workspace }}/portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v4
