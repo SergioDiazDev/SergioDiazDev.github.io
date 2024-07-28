@@ -28,15 +28,15 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio  # Establece el directorio de trabajo a 'portfolio'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Change to project directory
-        run: cd /workspaces/SergioDiazDev.github.io/portfolio/
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          cd /workspaces/SergioDiazDev.github.io/portfolio/
           if [ -f "yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
@@ -72,17 +72,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: |
-          cd /workspaces/SergioDiazDev.github.io/portfolio/
-          ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: |
-          cd /workspaces/SergioDiazDev.github.io/portfolio/
-          ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /workspaces/SergioDiazDev.github.io/portfolio/out
+          path: ./out
 
   # Deployment job
   deploy:
@@ -96,4 +92,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          folder: /workspaces/SergioDiazDev.github.io/portfolio/out
+          folder: portfolio/out
