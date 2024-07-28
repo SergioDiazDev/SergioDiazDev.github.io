@@ -27,10 +27,8 @@ concurrency:
 jobs:
   # Build job
   build:
+  working-directory: ./portfolio
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: portfolio  # Establece el directorio de trabajo a 'portfolio'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -76,8 +74,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ./portfolio
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        working-directory: ./portfolio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
