@@ -1,7 +1,7 @@
 'use client';
 
 import './perfil.css'
-import profilePic from '../../../../public/imgs/FotoCV_1.jpg';
+import profilePic from '../../../public/imgs/FotoCV_1.jpg';
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
