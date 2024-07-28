@@ -30,6 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PORTFOLIO_PATH: ${{ github.workspace }}/portfolio
+      echo ${{ github.workspace }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -88,8 +89,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      PORTFOLIO_PATH: ${{ github.workspace }}/portfolio
     needs: build
     steps:
       - name: Deploy to GitHub Pages
