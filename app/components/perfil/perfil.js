@@ -24,7 +24,7 @@ const Perfil = () => {
     };
 
     return (
-        <div className="modal_perfil" style={{ width: isExpanded ? '60vh' : '10vh', height: isExpanded ? 'auto' : '10vh' }}>
+        <div className="modal_perfil" style={{ width: isExpanded ? '60vh' : '0', height: isExpanded ? 'auto' : '10vh', background: isExpanded ? 'rgb(2,0,36)' : 'rgba(0,0,0,0)' }}>
             <div className={`profileContainer ${isExpanded ? 'expanded' : ''}`}>
                 <div className='profileImage'>
                     <Image
@@ -37,7 +37,7 @@ const Perfil = () => {
                 {isExpanded && (
                     <div className='profileDetails'>
                         <h2>Sergio Diaz Ruiz</h2>
-                        <h3>Una pequeña presentación sobre ti. Puede ser una breve descripción de quién eres y qué haces.</h3>
+                        <h3>Soy un apasionado de la programación, con un enfoque constante en el aprendizaje. Mi interés en la innovación me ha llevado a especializarme en la inteligencia artificial aplicada a microcontroladores (TinyML), motivo por el cual actualmente estoy cursando una especialización en IA en 42 Málaga Fundación Telefónica.</h3>
                     </div>
                 )}
             </div>
