@@ -1,0 +1,55 @@
+
+ul.menu {
+list-style-type: none;
+margin: 2vh;
+padding: 1vh;
+border-radius: 14px;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8935223747702206) 50%, rgba(2,0,36,1) 100%);
+display: flex;
+justify-content: space-around;
+}
+
+
+li.menu {
+display: inline-block;
+padding: 1vh;
+padding-left: 10vh;
+padding-right: 10vh;
+border-radius: 14px;
+background: rgba(255, 255, 255, 0);
+display: flex;
+justify-content: space-around;
+}
+
+a:hover
+{
+    color: rgb(0, 255, 0);
+}
+
+/* Estilos del submenu */
+ul.menu li {
+    position: relative; /* Necesario para posicionar correctamente el submenu */
+}
+
+ul.menu .submenu {
+    display: none; /* Ocultar el submenu inicialmente */
+    position: static;
+    top: 100%;
+    padding: 0;
+    border-radius: 14px;
+    margin: 0, 1vh, 0, 0;
+    background: rgba(9, 9, 121, 0);
+    list-style-type: circle;
+    flex-direction: column; /* Asegurar que los elementos del submenu se apilen verticalmente */
+}
+
+ul.menu li:hover > .submenu {
+    display: flex; /* Mostrar el submenu al hacer hover */
+}
+
+ul.menu .submenu li {
+    margin: 1vh;
+    padding: 0%;
+    background: rgba(9, 9, 121, 0);
+}
