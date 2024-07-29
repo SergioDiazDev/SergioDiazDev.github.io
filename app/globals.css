@@ -33,6 +33,7 @@ h1 {
   align-items: center;
   font-size: xx-large;
   margin-top: 1lh;
+  margin: auto
 }
 
 @layer utilities {
@@ -43,5 +44,7 @@ h1 {
 
 div.Perfil_titulo {
   display: flex;
-  justify-content: space-around;
+  align-items: center; /* Centra verticalmente */
+  gap: 10px;
+  margin-right: auto;
 }

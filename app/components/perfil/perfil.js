@@ -24,14 +24,14 @@ const Perfil = () => {
     };
 
     return (
-        <div className="modal_perfil" style={{ width: isExpanded ? '60vh' : '0', height: isExpanded ? 'auto' : '10vh', background: isExpanded ? 'rgb(2,0,36)' : 'rgba(0,0,0,0)' }}>
+        <div className="modal_perfil" style={{ width: isExpanded ? '60vh' : '30vh', height: isExpanded ? 'auto' : '10vh', background: isExpanded ? 'rgb(2,0,36)' : 'rgba(0,0,0,0)' }}>
             <div className={`profileContainer ${isExpanded ? 'expanded' : ''}`}>
                 <div className='profileImage'>
                     <Image
                         src={profilePic}
                         alt="Profile Image"
                         width={isExpanded ? 150 : 'auto'}
-                        height='auto'
+                        height={isExpanded ? 150 : 'auto'}
                     />
                 </div>
                 {isExpanded && (

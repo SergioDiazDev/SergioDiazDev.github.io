@@ -22,7 +22,7 @@
     padding: 1vh;
     border-radius: 10px;
     width: 100%; /* Ajusta el ancho al contenedor padre */
-    transition: opacity 0.5s ease-out; /* Transición suave */
+    transition: opacity 0.01s; /* Transición suave */
     opacity: 1; /* Inicialmente visible */
     overflow: hidden; /* Para ocultar el contenido cuando está comprimido */
 }
@@ -65,6 +65,7 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
     overflow: visible;
+    z-index: 10;
 }
   
 .button_perfil:hover {

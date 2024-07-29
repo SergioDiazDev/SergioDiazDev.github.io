@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main>
       <Menu/>
+      <h1>Desarrollador software especializado en IA y software embebido</h1>
       <div className="Perfil_titulo">
         <Perfil/>
-        <h1>Desarrollador software especializado en IA y software embebido</h1>
       </div>
       
       
