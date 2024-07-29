@@ -22,7 +22,7 @@
     padding: 1vh;
     border-radius: 10px;
     width: 100%; /* Ajusta el ancho al contenedor padre */
-    transition: opacity 0.01s; /* Transición suave */
+    transition: opacity 0s; /* Transición suave */
     opacity: 1; /* Inicialmente visible */
     overflow: hidden; /* Para ocultar el contenido cuando está comprimido */
 }
