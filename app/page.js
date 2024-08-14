@@ -1,6 +1,7 @@
 import { Container } from "postcss";
-import Menu from "./components/menus/menu_inicio/menu";
+import Menu from "./components/menus/menu_inicio/Menu";
 import Perfil from "./components/perfil/perfil"
+import Contacto from "./components/contacto/Contacto";
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
       <div className="Perfil_titulo">
         <Perfil/>
       </div>
+      <footer>
+        <Contacto/>
+      </footer>
 
     </main>
   );

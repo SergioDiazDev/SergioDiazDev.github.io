@@ -1,0 +1,19 @@
+div.Contacto_page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.Contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    padding: 0.5vh;
+    margin: 1vh;
+    background: aliceblue;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+}

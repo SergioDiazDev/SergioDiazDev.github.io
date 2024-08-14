@@ -24,10 +24,7 @@ export default function Menu() {
                     </Link>
                 </ul>
             </li>
-            <Link href="#">
-                <li>Sobre Mí</li>
-            </Link>
-            <Link href="#">
+            <Link href="/Contactos">
                 <li>Contacto</li>
             </Link>
         </ul>
